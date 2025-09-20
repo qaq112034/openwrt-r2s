@@ -15,6 +15,9 @@ name: OpenWrt Builder
 on:
   repository_dispatch:
   workflow_dispatch:
+# 这行是权限配置，复制过去就行
+permissions:
+  contents: write  # 允许读写仓库里的文件（比如放编译好的东西）
 
 env:
   REPO_URL: https://github.com/coolsnowwolf/lede
